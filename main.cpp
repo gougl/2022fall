@@ -5,6 +5,7 @@
 #include "MyArrayListPlus.h"
 #include "MyArrayList2.h"
 #include "MyArrayList2Plus.h"
+#include "MyLinkedList.h"
 //using namespace std;
 //typedef struct student{
 //    int age;
@@ -108,38 +109,45 @@ int main() {
 //    d.display();
 //    d.show();
 
-    MyArrayList2 a;
-    initial_MyArrayList2(&a);
-    cout << a.length << endl;
-    cout << a.CAP << endl;
-    insert_MyArrayList2(&a,0,1);
-    insert_MyArrayList2(&a,0,2);
-    insert_MyArrayList2(&a,0,3);
-    insert_MyArrayList2(&a,0,4);
-    insert_MyArrayList2(&a,0,5);
-    display_MyArrayList2(a);
-    cout << "the delete element is :" << del_MyArrayList2(&a, 0) << endl;
-    display_MyArrayList2(a);
-    cout << search_MyArrayList2(a, 3) << endl;
-    cout << find_MyArrayList2(a,0)<<endl;
+//    MyArrayList2 a;
+//    initial_MyArrayList2(&a);
+//    cout << a.length << endl;
+//    cout << a.CAP << endl;
+//    insert_MyArrayList2(&a,0,1);
+//    insert_MyArrayList2(&a,0,2);
+//    insert_MyArrayList2(&a,0,3);
+//    insert_MyArrayList2(&a,0,4);
+//    insert_MyArrayList2(&a,0,5);
+//    display_MyArrayList2(a);
+//    cout << "the delete element is :" << del_MyArrayList2(&a, 0) << endl;
+//    display_MyArrayList2(a);
+//    cout << search_MyArrayList2(a, 3) << endl;
+//    cout << find_MyArrayList2(a,0)<<endl;
+//
+//
+//    MyArrayList2Plus<int> b;
+//    b.add(0,10);
+//    b.add(0,20);
+//    b.add(0,30);
+//    b.add(0,40);
+//    b.display();
+//    cout << "the delete is " << b.del(2) << endl;
+//    b.display();
+//    cout << b.search(60) << endl;
+//
+//    MyArrayList2Plus<char> c;
+//    c.add(0,'a');
+//    c.add(0,'b');
+//    c.add(0,'c');
+//    c.display();
+//    cout << "the delete is " << c.del(0) << endl;
 
-
-    MyArrayList2Plus<int> b;
-    b.add(0,10);
-    b.add(0,20);
-    b.add(0,30);
-    b.add(0,40);
-    b.display();
-    cout << "the delete is " << b.del(2) << endl;
-    b.display();
-    cout << b.search(60) << endl;
-
-    MyArrayList2Plus<char> c;
-    c.add(0,'a');
-    c.add(0,'b');
-    c.add(0,'c');
-    c.display();
-    cout << "the delete is " << c.del(0) << endl;
-
+    MyLinkedList<int> a;
+    a.addFirst(1);
+    a.addFirst(2);
+    a.addFirst(3);
+    a.addLast(4);
+    a.addLast(5);
+    a.display();
     return 0;
 }
