@@ -77,6 +77,12 @@ public:
             p = p->getNext();
         }
     }
+
+    T removeFirst(){
+        T e = head->getData();
+        head = head->getNext();
+        return e;
+    }
 };
 
 #endif //INC_2022FALL_MYLINKEDLIST_H

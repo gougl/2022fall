@@ -6,6 +6,13 @@
 #include "MyArrayList2.h"
 #include "MyArrayList2Plus.h"
 #include "MyLinkedList.h"
+#include "MyStack.h"
+#include "MyStackPlus.h"
+#include "MyStackInheritance.h"
+#include "MyLinkedStack.h"
+#include "MyQueue.h"
+#include "MyLinkedQueue.h"
+#include "MyBinaryTree.h"
 //using namespace std;
 //typedef struct student{
 //    int age;
@@ -142,12 +149,78 @@ int main() {
 //    c.display();
 //    cout << "the delete is " << c.del(0) << endl;
 
-    MyLinkedList<int> a;
-    a.addFirst(1);
-    a.addFirst(2);
-    a.addFirst(3);
-    a.addLast(4);
-    a.addLast(5);
-    a.display();
+//    MyLinkedList<int> a;
+//    a.addFirst(1);
+//    a.addFirst(2);
+//    a.addFirst(3);
+//    a.addLast(4);
+//    a.addLast(5);
+//    a.display();
+
+    stack a;
+    initialize_stack(&a);
+    push(&a, 1);
+    push(&a, 2);
+    push(&a, 3);
+    cout << pop(&a) << endl;
+    cout << pop(&a) << endl;
+    cout << pop(&a) << endl;
+
+    MyStack<char> b;
+    b.push('a');
+    b.push('b');
+    b.push('c');
+    cout << b.pop() << endl;
+    cout << b.pop() << endl;
+    cout << b.pop() << endl;
+
+    MyStackInheritance<char> c;
+    c.push('A');
+    c.push('B');
+    c.push('C');
+
+    cout << c.pop() << endl;
+    cout << c.pop() << endl;
+    cout << c.pop() << endl;
+
+    MyLinkedStack<char> d;
+    d.push('x');
+    d.push('y');
+    d.push('z');
+    cout << d.pop() << endl;
+    cout << d.pop() << endl;
+    cout << d.pop() << endl;
+
+    MyQueue<int> e;
+    e.enqueue(10);
+    e.enqueue(20);
+    e.enqueue(30);
+    cout << e.outqueue() << endl;
+    cout << e.outqueue() << endl;
+    cout << e.outqueue() << endl;
+
+    MyLinkedQueue<char> f;
+    f.enqueue('P');
+    f.enqueue('Q');
+    f.enqueue('R');
+    cout << f.outqueue() << endl;
+    cout << f.outqueue() << endl;
+    cout << f.outqueue() << endl;
+
+    bnode<char> *tree = new bnode<char>('A');
+    bnode<char> *p = new bnode<char>('B');
+    tree->setLchild(p);
+    bnode<char> *q = new bnode<char>('D');
+    tree->setRchild(q);
+    bnode<char> *r = new bnode<char>('C');
+    p->setRchild(r);
+    MyBinaryTree<char> *t = new MyBinaryTree<char>(tree);
+    t->preorder();
+    t->inorder();
+    t->postorder();
+    cout << t->getHeight() << endl;
+    cout << t->getLeafNumber() << endl;
+
+
     return 0;
 }

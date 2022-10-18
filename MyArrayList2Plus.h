@@ -22,6 +22,9 @@ public:
         CAP = 100;
     }
 
+    int getLength(){
+        return length;
+    }
     // insert
     void add(int pos, T e){
         if(length){
